@@ -1,0 +1,70 @@
+{
+    "action": "Smile",
+    "images": "test.png",
+    "metadata": {
+        "duration": 3.07,
+        "soundFile": "D:/src/qt/talkingLips/rhubarb/audio_in/hear_me.wav"
+    },
+    "mouthCues": [
+        {
+            "end": 0.05,
+            "start": 0,
+            "value": "X"
+        },
+        {
+            "end": 0.24,
+            "start": 0.05,
+            "value": "B"
+        },
+        {
+            "end": 0.62,
+            "start": 0.24,
+            "value": "X"
+        },
+        {
+            "end": 0.75,
+            "start": 0.62,
+            "value": "C"
+        },
+        {
+            "end": 0.89,
+            "start": 0.75,
+            "value": "F"
+        },
+        {
+            "end": 1.08,
+            "start": 0.89,
+            "value": "C"
+        },
+        {
+            "end": 1.13,
+            "start": 1.08,
+            "value": "E"
+        },
+        {
+            "end": 1.38,
+            "start": 1.13,
+            "value": "F"
+        },
+        {
+            "end": 1.59,
+            "start": 1.38,
+            "value": "B"
+        },
+        {
+            "end": 1.67,
+            "start": 1.59,
+            "value": "A"
+        },
+        {
+            "end": 2.07,
+            "start": 1.67,
+            "value": "B"
+        },
+        {
+            "end": 3.07,
+            "start": 2.07,
+            "value": "X"
+        }
+    ]
+}
