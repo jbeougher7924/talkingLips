@@ -3,7 +3,7 @@
     "images": "test.png",
     "metadata": {
         "duration": 3.07,
-        "soundFile": "D:/src/qt/talkingLips/rhubarb/audio_in/hear_me.wav"
+        "soundFile": "D:\\src\\qt\\talkingLips\\talkingLips\\rhubarb/audio_in/hear_me.wav"
     },
     "mouthCues": [
         {
@@ -29,7 +29,7 @@
         {
             "end": 0.89,
             "start": 0.75,
-            "value": "F"
+            "value": "E"
         },
         {
             "end": 1.08,

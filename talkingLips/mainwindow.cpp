@@ -16,9 +16,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
 void MainWindow::tempTestCode()
 {
-    ui->audi_file_LnEd->setText("D:/src/qt/talkingLips/rhubarb/audio_in/hear_me.wav");
+    ui->audi_file_LnEd->setText("rhubarb/audio_in/hear_me.wav");
     ui->action_LnEd->setText("Smile");
-    ui->json_file_LnEd->setText("D:/src/qt/talkingLips/json/hear_me.json");
+    ui->json_file_LnEd->setText("json/hear_me.json");
 }
 
 MainWindow::~MainWindow()
@@ -39,7 +39,7 @@ QJsonDocument MainWindow::readFile()
 //    qDebug() << filename;
     QJsonDocument sd = QJsonDocument::fromJson(settings.toUtf8());
 
-    QJsonObject sett2 = sd.object();
+//    QJsonObject sett2 = sd.object();
 //    qDebug() << sett2.value(QString("metadata"));  // <- print my title
 //    qDebug() << sett2.value(QString("mouthCues"));  // <- print my title
     return sd;
@@ -62,11 +62,10 @@ void MainWindow::buildFile()
         }
 
     QJsonDocument phoneFile = readFile();
-    QJsonDocument saveDoc(phoneFile);
-    QJsonObject tempDoc = phoneFile.object();
-    write(tempDoc);
+    QJsonObject mouthQueue = phoneFile.object();
+    write(mouthQueue);
 
-    saveDoc.setObject(tempDoc);
+    QJsonDocument saveDoc(mouthQueue);
 
     saveFile.write(saveDoc.toJson(QJsonDocument::Indented));
     updateStatus("Json Action File Completed.");
@@ -125,7 +124,7 @@ bool MainWindow::process_Audio()
 {
 
 //    QString program = QFileDialog::getOpenFileName();
-    QString program = "D:/src/qt/talkingLips/rhubarb/rhubarb.exe";
+    QString program = "rhubarb/rhubarb.exe";
 //    qDebug() << "path" << program;
     QStringList arguments;
 //    QString filename = QFileDialog::getOpenFileName();
