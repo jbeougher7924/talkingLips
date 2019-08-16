@@ -8,61 +8,73 @@
     "mouthCues": [
         {
             "end": 0.05,
+            "lapse": 0.05,
             "start": 0,
             "value": "X"
         },
         {
             "end": 0.24,
+            "lapse": 0.19,
             "start": 0.05,
             "value": "B"
         },
         {
             "end": 0.62,
+            "lapse": 0.38,
             "start": 0.24,
             "value": "X"
         },
         {
             "end": 0.75,
+            "lapse": 0.13,
             "start": 0.62,
             "value": "C"
         },
         {
             "end": 0.89,
+            "lapse": 0.14,
             "start": 0.75,
             "value": "E"
         },
         {
             "end": 1.08,
+            "lapse": 0.19000000000000006,
             "start": 0.89,
             "value": "C"
         },
         {
             "end": 1.13,
+            "lapse": 0.04999999999999982,
             "start": 1.08,
             "value": "E"
         },
         {
             "end": 1.38,
+            "lapse": 0.25,
             "start": 1.13,
             "value": "F"
         },
         {
             "end": 1.59,
+            "lapse": 0.2100000000000002,
             "start": 1.38,
             "value": "B"
         },
         {
             "end": 1.67,
+            "lapse": 0.07999999999999985,
             "start": 1.59,
             "value": "A"
         },
         {
             "end": 2.07,
+            "lapse": 0.3999999999999999,
             "start": 1.67,
             "value": "B"
         },
         {
             "end": 3.07,
+            "lapse": 1,
             "start": 2.07,
             "value": "X"
         }

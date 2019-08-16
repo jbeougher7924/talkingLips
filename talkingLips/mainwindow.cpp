@@ -63,12 +63,30 @@ void MainWindow::buildFile()
 
     QJsonDocument phoneFile = readFile();
     QJsonObject mouthQueue = phoneFile.object();
+    lapseTimeCalc(mouthQueue);
+
     write(mouthQueue);
 
     QJsonDocument saveDoc(mouthQueue);
 
     saveFile.write(saveDoc.toJson(QJsonDocument::Indented));
     updateStatus("Json Action File Completed.");
+}
+
+void MainWindow::lapseTimeCalc(QJsonObject &json)
+{
+
+    QJsonArray mouthArray   = json["mouthCues"].toArray();
+    for (int mouthIndex = 0; mouthIndex < mouthArray.size(); ++mouthIndex) {
+        QJsonObject mouthObject = mouthArray[mouthIndex].toObject();
+        double endTime = mouthObject["end"].toDouble();
+        double startTime = mouthObject["start"].toDouble();
+        double lapseTime = endTime - startTime;
+        mouthObject["lapse"] = lapseTime;
+        mouthArray[mouthIndex] = mouthObject;
+    }
+    json["mouthCues"] = mouthArray;
+
 }
 
 void MainWindow::connect_slots()
@@ -80,6 +98,9 @@ void MainWindow::connect_slots()
     connect(ui->start_process_btn, SIGNAL(clicked()), this, SLOT(process_Audio()));
     connect(&audioProcessor, SIGNAL(finished(int)), this, SLOT(updateStatusDone()));
     connect(ui->start_build_btn, SIGNAL(clicked()), this, SLOT(buildFile()));
+//    connect(ui->test_btn, SIGNAL(clicked()), this, SLOT(lapseTimeCalc()));
+
+
 
 }
 

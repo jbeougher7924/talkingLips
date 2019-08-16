@@ -11,7 +11,7 @@
 #include <QStringList>
 #include <QObject>
 #include <QProcess>
-
+#include <QJsonArray>
 
 namespace Ui {
 class MainWindow;
@@ -40,7 +40,7 @@ public slots:
     void updateStatus(QString status_value);
     void updateStatusDone();
     void buildFile();
-
+    void lapseTimeCalc(QJsonObject &json);
 
 
 private:

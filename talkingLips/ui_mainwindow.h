@@ -48,6 +48,7 @@ public:
     QPushButton *json_file_btn;
     QLabel *json_file_lbl;
     QLineEdit *json_file_LnEd;
+    QPushButton *test_btn;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -119,6 +120,9 @@ public:
         json_file_LnEd = new QLineEdit(centralWidget);
         json_file_LnEd->setObjectName(QString::fromUtf8("json_file_LnEd"));
         json_file_LnEd->setGeometry(QRect(380, 50, 151, 20));
+        test_btn = new QPushButton(centralWidget);
+        test_btn->setObjectName(QString::fromUtf8("test_btn"));
+        test_btn->setGeometry(QRect(630, 300, 75, 23));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -153,6 +157,7 @@ public:
         close_btn->setText(QCoreApplication::translate("MainWindow", "Close", nullptr));
         json_file_btn->setText(QCoreApplication::translate("MainWindow", "Browse", nullptr));
         json_file_lbl->setText(QCoreApplication::translate("MainWindow", "Json File", nullptr));
+        test_btn->setText(QCoreApplication::translate("MainWindow", "test button", nullptr));
     } // retranslateUi
 
 };
